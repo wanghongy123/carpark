@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    username: root
+    password: admin123456
+    url: jdbc:mysql://localhost:3306/carpark?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver

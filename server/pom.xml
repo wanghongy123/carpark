@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.1</version>
+        <version>3.3.8</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.github.wanghongy132.carpark</groupId>
@@ -14,19 +14,9 @@
     <name>server</name>
     <description>server</description>
     <packaging>pom</packaging>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+    <modules>
+        <module>carpark-main</module>
+    </modules>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -44,23 +34,22 @@
 <!--            <artifactId>mybatis-spring-boot-starter</artifactId>-->
 <!--            <version>3.0.4</version>-->
 <!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>com.mysql</groupId>-->
-<!--            <artifactId>mysql-connector-j</artifactId>-->
-<!--            <scope>runtime</scope>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
-
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter-test</artifactId>
-            <version>3.0.4</version>
-            <scope>test</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
     </dependencies>
 
@@ -74,6 +63,7 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
